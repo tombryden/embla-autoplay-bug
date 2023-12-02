@@ -23,7 +23,6 @@ function Slide({ num }: { num: number }) {
 export default function Home() {
   const [emblaRef] = useEmblaCarousel(
     {
-      loop: true,
       slidesToScroll: 1,
       align: "start",
     },
@@ -43,7 +42,7 @@ export default function Home() {
       <div ref={emblaRef} style={{ overflow: "hidden" }}>
         <div style={{ display: "flex" }}>
           <Slide num={1} />
-          <Slide num={2} />
+          {/* <Slide num={2} /> */}
         </div>
       </div>
     </div>
