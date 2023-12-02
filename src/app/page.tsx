@@ -2,7 +2,6 @@
 
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
-import Link from "next/link";
 
 function Slide({ num }: { num: number }) {
   return (
@@ -25,6 +24,7 @@ export default function Home() {
     {
       slidesToScroll: 1,
       align: "start",
+      loop: true,
     },
     [
       Autoplay({
@@ -37,12 +37,14 @@ export default function Home() {
 
   return (
     <div>
-      <Link href="/another">Another Page</Link>
-
       <div ref={emblaRef} style={{ overflow: "hidden" }}>
         <div style={{ display: "flex" }}>
           <Slide num={1} />
-          {/* <Slide num={2} /> */}
+          <Slide num={2} />
+          <Slide num={3} />
+          <Slide num={4} />
+          <Slide num={5} />
+          <Slide num={6} />
         </div>
       </div>
     </div>
